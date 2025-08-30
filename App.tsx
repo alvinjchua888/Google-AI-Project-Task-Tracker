@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { ProjectView } from './components/ProjectView';
@@ -77,7 +76,7 @@ const App: React.FC = () => {
   const projectTasks = tasks.filter(task => task.projectId === selectedProjectId);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow p-4 sm:p-6 lg:p-8">
         <ProjectView

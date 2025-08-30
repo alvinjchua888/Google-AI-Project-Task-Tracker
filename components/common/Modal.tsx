@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { XMarkIcon } from '../IconComponents';
 
@@ -14,16 +13,18 @@ export const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-70 z-50 flex justify-center items-center"
+      className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm z-50 flex justify-center items-center"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
     >
       <div 
-        className="bg-gray-800 rounded-lg shadow-xl w-full max-w-md m-4 border border-yellow-500/50"
+        className="bg-slate-800 rounded-xl shadow-xl w-full max-w-md m-4 border border-slate-700"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-between items-center p-4 border-b border-gray-700">
-          <h2 className="text-xl font-semibold text-yellow-400">{title}</h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-white">
+        <div className="flex justify-between items-center p-4 border-b border-slate-700">
+          <h2 className="text-xl font-semibold text-cyan-400">{title}</h2>
+          <button onClick={onClose} className="text-slate-400 hover:text-slate-100" aria-label="Close modal">
             <XMarkIcon className="h-6 w-6" />
           </button>
         </div>
