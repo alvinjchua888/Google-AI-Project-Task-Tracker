@@ -1,0 +1,5 @@
+{
+  "name": "PyTask Manager",
+  "description": "A project management application with a Python-inspired theme, featuring a Kanban board and an AI assistant to help generate project tasks.",
+  "requestFramePermissions": []
+}
